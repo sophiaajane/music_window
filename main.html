@@ -2,9 +2,10 @@
 <html>
 <head>
   <title> Relaxation Room </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="player.css"/>
 <style>
 body, html {
   height: 100%;
@@ -14,13 +15,16 @@ body, html {
   background-image: url("cloudy_day.png");
   height: 100%;
   background-position: relative;
-  background-repeat: no-repeat, no-repeat;
+  background-repeat: no-repeat;
   background-size: 100%
 }
 #draggableWindow {
   position: absolute;
 }
-
+#container {
+  height: 100%;
+  position: relative;
+}
 
 
 </style>
@@ -30,28 +34,23 @@ body, html {
   <script src="audioplayerengine/initaudioplayer-1.js"></script>
 </head>
 <body>
-
-  <div class="bg"></div>
-  <div id="windowdiv"/>
-  <div id="windowdivheader"/>
-  </div>
-  <div id="draggableWindow" style="left:256.1px; top:-64px; position: absolute">
-    <img id="draggableWindowheader" src="separate_moving_window1.png" width="456.5" height="667.5"
+  <div id="container">
+    <div class="bg"></div>
+    <div id="windowdiv"/>
+    <div id="windowdivheader"/>
+    <div id="draggableWindow" style="left:256px; top:0px; position: absolute">
+      <img id="draggableWindowheader" src="separate_moving_window1.png" width="456.5" height="667.5"
            alt="image" draggable="true"/>
+   </div>
+
   </div>
-    <div id="amazingaudioplayer-1" style="display:block;position:relative;width:100%;max-width:420px;height:auto;margin:0px auto 0px;">
-      <ul class="amazingaudioplayer-audios" style="display:none;">
-          <li data-artist="Shuggie Otis" data-title="Strawberry Letter 23" data-album="" data-info="" data-image="" data-duration="0">
-              <div class="amazingaudioplayer-source" data-src="audios/Shuggie%20Otis%20-%20Strawberry%20Letter%2023%20%28Audio%29.mp3" data-type="audio/mpeg" ></div>
-          </li>
-      </ul>
-    </div>
   <audio id="myAudio">
     <source src="cloudy_day_audio.mp3" type="audio/mpeg">
 
   </audio>
   <script src="https://cdn.jsdelivr.net/gh/nbriz/NWS/NWS.js"></script>
   <script src="plain-draggable.min.js"></script>
+  <script defer src="player.js"></script>
   <script src="main.js"></script>
 
 </body>
