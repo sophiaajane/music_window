@@ -16,6 +16,7 @@ window.addEventListener('load', async function() {
 
 
 
+window.addEventListener("DOMContentLoaded", () => {
 
   let playlist = [
     {name: "CouldMeetYou!!!", src: "couldmeetyou.mp3"},
