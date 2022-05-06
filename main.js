@@ -10,10 +10,6 @@ class Maths {
     return this.lerp(this.norm(value, sourceMin, sourceMax), destMin, destMax)
   }
 }
-const music = new Audio('cloudy_day_audio.mp3');
-
-
-
 
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -23,6 +19,14 @@ window.addEventListener("DOMContentLoaded", () => {
     {name: "Tell Him", src: "tellhim.mp3"},
     {name: "Luv(sic) Part 2", src: "luvsicpt2.mp3"}
   ];
+
+  
+const music = new Audio('cloudy_day_audio.mp3');
+window.addEventListener('load', async function() {
+
+
+
+
 
   // (A2) AUDIO PLAYER & GET HTML CONTROLS
   const audio = new Audio(),
