@@ -11,7 +11,7 @@ class Maths {
   }
 }
 const music = new Audio('cloudy_day_audio.mp3');
-window.addEventListener('load', async function() {
+
 
 
 
