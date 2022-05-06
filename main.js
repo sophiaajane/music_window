@@ -18,8 +18,8 @@ window.addEventListener('load', async function() {
 
 window.addEventListener("DOMContentLoaded", () => {
 
-  let alist = [
-    {name: "CouldMeetYou!!!", src: "couldmeetyou.mp3"},
+  let playlist = [
+    {name: "CouldMeetYou", src: "couldmeetyou.mp3"},
     {name: "Tell Him", src: "tellhim.mp3"},
     {name: "Luv(sic) Part 2", src: "luvsicpt2.mp3"}
   ];
