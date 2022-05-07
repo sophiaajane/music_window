@@ -24,6 +24,8 @@ body, html {
 }
 #draggableWindow {
   position: absolute;
+  left: 16vw;
+  top: 0px;
 }
 #container {
   height: 100%;
@@ -33,20 +35,23 @@ body, html {
 /* (A) MATERIAL ICONS */
 .material-icons {
   font-size: 28px;
-  color: #efff6a;
+  color: #986960;
 }
 
 /* (B) WRAPPER */
 #aWrap {
-  font-family: arial, sans-serif;
+  font-family: Courier, sans-serif;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   box-sizing: border-box;
-  max-width: 500px;
+  max-width: 100%;
   padding: 10px;
-  border-radius: 10px;
-  background: #484848;
+  border-radius: 0px;
+  background: #2d2727;
+}
+#aList {
+  background: #2d2727;
 }
 
 /* (C) PLAY/PAUSE BUTTON */
@@ -62,7 +67,7 @@ body, html {
 #aCron {
   font-size: 14px;
   color: #cbcbcb;
-  margin: 0 10px;
+  margin: 0 30px;
 }
 
 /* (E) RANGE SLIDERS */
@@ -106,24 +111,13 @@ body, html {
 
 /* (F) VOLUME */
 #aVolIco {
-  margin: 0 10px;
+  margin: 0 20px;
 }
 
-/* (G) PLAYLIST */
-#aList {
-  width: 100%;
-  padding: 10px;
-  margin: 10px;
-  color: #7e7e7e;
-  background: #323232;
+#draggableWindowheader {
+  height: 43.25vw;
 }
-.aRow {
-  cursor: pointer;
-  padding: 10px 0;
-}
-.aRow.now {
-  color: #fea;
-}
+
 
 </style>
   <script src="audioplayerengine/jquery.js"></script>
@@ -136,8 +130,8 @@ body, html {
     <div class="bg"></div>
     <div id="windowdiv"/>
     <div id="windowdivheader"/>
-    <div id="draggableWindow" style="left:256px; top:0px; position: absolute">
-      <img id="draggableWindowheader" src="separate_moving_window1.png" width="456.5" height="667.5"
+    <div id="draggableWindow">
+      <img id="draggableWindowheader" src="separate_moving_window1.png"
            alt="image" draggable="true"/>
    </div>
 

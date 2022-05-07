@@ -13,16 +13,25 @@ class Maths {
 const music = new Audio('cloudy_day_audio.mp3');
 window.addEventListener('load', async function() {
 
-
+  window.addEventListener('resize', () => {
+    const contL = window.innerWidth * 0.16
+    const contW = window.innerWidth * 0.37
+    draggable.containment = { left: contL, top: 0, width: contL + contW, height: 0 }
+  })
 
   draggable = new PlainDraggable(document.getElementById('draggableWindow'));
-  draggable.containment = {left: 255.5, top: 0, width: 800, height: 0};
+  const contL = window.innerWidth * 0.16
+  const contW = window.innerWidth * 0.37
+  draggable.containment = {left: contL, top: 0, width: contL + contW, height: 0};
   draggable.onDrag = function(newPosition) {
     if(music.paused){
       music.play();
       music.loop =true
     }
-    music.volume =Maths.map(newPosition.left, 255, 600, 0, 1)
+    const minL = draggable.containment.left
+   const maxL = draggable.containment.width + minL
+   const v = Maths.map(newPosition.left, minL, maxL, 0, 1)
+   music.volume = v
   };
   const bg = document.querySelector('.bg')
   const weather = await NWS.getForecast()
