@@ -1,11 +1,22 @@
-window.addEventListener("DOMContentLoaded", () => {
+window.addEventListener('load', async function() {
   // (A) PLAYER INIT
   // (A1) PLAYLIST - CHANGE TO YOUR OWN!
-  let playlist = [
-    {name: "Sugar Plum Fairy", src: "S1.mp3"},
-    {name: "If I Had A Chicken", src: "S2.mp3"},
-    {name: "Run Little Chicken", src: "S3.mp3"}
-  ];
+  const weather = await NWS.getForecast()
+  console.log(weather)
+  if(weather.temperature > 70 && weather.shortForecast==='Cloudy'){
+    var playlist = [
+      {name: "yo yo yo", src: "couldmeetyou.mp3"}
+    ];
+  } else if(weather.temperature < 50){
+    var playlist = [
+      {name: "Luv Sic Part II", src: "luvsicpt2.mp3"}
+    ];
+  } else {
+    var playlist = [
+      {name: "Tell Him", src: "tellhim.mp3"}
+    ];
+  }
+
 
   // (A2) AUDIO PLAYER & GET HTML CONTROLS
   const audio = new Audio(),
