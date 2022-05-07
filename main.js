@@ -13,6 +13,8 @@ class Maths {
 const music = new Audio('cloudy_day_audio.mp3');
 window.addEventListener('load', async function() {
 
+
+
   draggable = new PlainDraggable(document.getElementById('draggableWindow'));
   draggable.containment = {left: 255.5, top: 0, width: 800, height: 0};
   draggable.onDrag = function(newPosition) {
