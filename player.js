@@ -3,20 +3,29 @@ window.addEventListener('load', async function() {
   // (A1) PLAYLIST - CHANGE TO YOUR OWN!
   const weather = await NWS.getForecast()
   console.log(weather)
-  if(weather.temperature > 70 && weather.shortForecast==='Cloudy'){
+  if(weather.temperature > 60 && weather.shortForecast==='Partly Sunny'){
     var playlist = [
-      {name: "yo yo yo", src: "couldmeetyou.mp3"}
+      {name: "CouldMeetYou!!!", src: "couldmeetyou.mp3"}
     ];
-  } else if(weather.temperature < 50){
+  } else if(weather.temperature < 60){
     var playlist = [
-      {name: "Luv Sic Part II", src: "luvsicpt2.mp3"}
+      {name: "CouldMeetYou!!! - 9th Wonder", src: "couldmeetyou.mp3"},
+      {name: "Tell Him - Ms. Lauryn Hill", src: "tellhim.mp3"},
+      {name: "Luv (sic) pt2 - Nujabes, Shing02", src: "luvsicpt2.mp3"},
+      {name: "BURDENSOUL!!! - 9th Wonder", src: "burdensoul.mp3"},
+      {name: "Lady Brown - Nujabes, Cise Starr", src: "ladybrown.mp3"},
+      {name: "You Got Me - The Roots, Tariq Trotter, Erykah Badu, Eve", src: "yougotme.mp3"},
+      {name: "Datura Stramonium - MF Doom", src: "daturastramonium.mp3"}
     ];
-  } else {
+  } else if(weather.temperature > 60){
     var playlist = [
-      {name: "Tell Him", src: "tellhim.mp3"}
+      {name: "U Gotta Love It - Nas", src: "ugottaloveit.mp3"},
+      {name: "Pacifics - Digable Planets", src:"pacifics.mp3"},
+      {name: "Peachfuzz - KMD", src: "peachfuzz.mp3"},
+      {name: "Hey Ma - Cam'Ron", src: "heyma.mp3"},
+      {name: "What's Going On - T. Honda", src: "whatsgoingon.mp3"}
     ];
   }
-
 
   // (A2) AUDIO PLAYER & GET HTML CONTROLS
   const audio = new Audio(),

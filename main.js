@@ -36,13 +36,17 @@ window.addEventListener('load', async function() {
   const bg = document.querySelector('.bg')
   const weather = await NWS.getForecast()
   console.log(weather)
-  if(weather.temperature > 70 && weather.shortForecast==='Cloudy'){
-    alert("its hot")
-  } else if(weather.temperature < 50){
-    alert("its cold")
+  if(weather.temperature > 60){
+    alert("it's kind of hot out today")
+    document.getElementById("myAudio").setAttribute('src', "newyork.mp3");
+    var yo = document.getElementById("myAudio").attribute
+    console.log(yo)
+    bg.style.backgroundImage='url("partly_cloudy_day.png")'
+
+
+  } else if(weather.temperature < 60){
+    alert("it's cold")
     bg.style.backgroundImage='url("cloudy_day.png")'
-  } else {
-    alert("perf")
   }
 
 });
