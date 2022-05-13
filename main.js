@@ -10,7 +10,7 @@ class Maths {
     return this.lerp(this.norm(value, sourceMin, sourceMax), destMin, destMax)
   }
 }
-const music = new Audio('cloudy_day_audio.mp3');
+var music = new Audio('cloudy_day_audio.mp3');
 window.addEventListener('load', async function() {
 
   window.addEventListener('resize', () => {
@@ -36,16 +36,15 @@ window.addEventListener('load', async function() {
   const bg = document.querySelector('.bg')
   const weather = await NWS.getForecast()
   console.log(weather)
-  if(weather.temperature > 60){
+  if(weather.temperature < 60){
+    var music = new Audio('newyork.mp3');
     alert("it's kind of hot out today")
-    document.getElementById("myAudio").setAttribute('src', "newyork.mp3");
-    var yo = document.getElementById("myAudio").attribute
-    console.log(yo)
     bg.style.backgroundImage='url("partly_cloudy_day.png")'
+    document.getElementById("draggableWindowheader").src="separate_moving_window2.png";
 
-
-  } else if(weather.temperature < 60){
+  } else if(weather.temperature > 60){
     alert("it's cold")
+    var music = new Audio('cloudy_day_audio.mp3');
     bg.style.backgroundImage='url("cloudy_day.png")'
   }
 
