@@ -38,7 +38,7 @@ window.addEventListener('load', async function() {
   console.log(weather)
   if(weather.temperature > 60){
     var music = new Audio('newyork.mp3');
-    alert("it's kind of hot out today")
+    alert("it's warm right now")
     bg.style.backgroundImage='url("partly_cloudy_day.png")'
     document.getElementById("draggableWindowheader").src="separate_moving_window2.png";
 
