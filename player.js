@@ -17,7 +17,7 @@ window.addEventListener('load', async function() {
       {name: "You Got Me - The Roots, Tariq Trotter, Erykah Badu, Eve", src: "yougotme.mp3"},
       {name: "Datura Stramonium - MF Doom", src: "daturastramonium.mp3"}
     ];
-  } else if(weather.temperature > 60){
+  } else {
     var playlist = [
       {name: "U Gotta Love It - Nas", src: "ugottaloveit.mp3"},
       {name: "Pacifics - Digable Planets", src:"pacifics.mp3"},
